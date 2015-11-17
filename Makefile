@@ -1,7 +1,7 @@
 SOURCEDIR=.
 SOURCES := $(shell find $(SOURCEDIR) -name '*.go')
 
-BINARY=docker-hat
+BINARY=helm
 
 VERSION=0.0.1
 BUILD=`git rev-parse --short HEAD`

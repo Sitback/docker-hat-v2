@@ -24,4 +24,4 @@ _testmain.go
 *.prof
 
 # Built binaries.
-docker-hat
+helm

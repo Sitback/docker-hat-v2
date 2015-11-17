@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/Sitback/docker-hat-v2",
+	"ImportPath": "github.com/Sitback/helm",
 	"GoVersion": "go1.5.1",
 	"Deps": [
 		{

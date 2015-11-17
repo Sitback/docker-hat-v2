@@ -1,5 +1,5 @@
-// Command docker-hat allows for faster development using Docker and Docker
-// Compose on Mac OS X.
+// Command helm allows for faster development using Docker and Docker Compose
+// on Mac OS X.
 package main
 
 import (
