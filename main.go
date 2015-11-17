@@ -4,8 +4,8 @@ package main
 
 import (
 	"fmt"
-	// "github.com/docker/libcompose"
 	log "github.com/Sirupsen/logrus"
+	// "github.com/docker/libcompose"
 	"gopkg.in/alecthomas/kingpin.v2"
 	"os"
 )
@@ -40,21 +40,30 @@ func main() {
 		return nil
 	})).Bool()
 
-	up := kingpin.Command("up", "Start up Docker containers defined in a Docker Compose file.")
-	down := kingpin.Command("down", "Stop any Docker containers running from a Docker Compose file.")
+	up := kingpin.Command("up", "Start up services defined in a Docker Compose file.")
+	upFile := up.Flag("file", "Docker Compose file to use").Short('f').Default("docker-compose.yml").String()
+	upDetached := up.Flag("detached", "Specify a Detached mode: Run containers in the background.").Short('d').Bool()
+
+	down := kingpin.Command("down", "Stop any running services.")
+	downFile := down.Flag("file", "Specify a Docker Compose file to use").Short('f').Default("docker-compose.yml").String()
 
 	host := kingpin.Command("host", "Control and configure your Docker Machine.")
-	hostInit := host.Command("init", "Initialises your Docker Machine for use.")
-	hostStart := host.Command("start", "Starts your Docker Machine.").Alias("up")
-	hostStop := host.Command("stop", "Stops your Docker Machine.").Alias("down")
-	hostRestart := host.Command("restart", "Restarts your Docker Machine.")
+	hostInit := host.Command("init", "Initialise your Docker Machine for use.")
+	hostStart := host.Command("start", "Start your Docker Machine.").Alias("up")
+	hostStop := host.Command("stop", "Stop your Docker Machine.").Alias("down")
+	hostRestart := host.Command("restart", "Restart your Docker Machine.")
 
 	switch kingpin.Parse() {
 	case up.FullCommand():
 		log.Info("Up!")
+		log.Info("File:", *upFile)
+		if *upDetached {
+			log.Info("Detaching...")
+		}
 
 	case down.FullCommand():
 		log.Info("Down!")
+		log.Info("File:", *downFile)
 
 	case hostInit.FullCommand():
 		log.Info("host init!")
