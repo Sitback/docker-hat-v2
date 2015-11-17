@@ -29,8 +29,9 @@ func main() {
 			Short('v').
 			Bool()
 	)
-
-	// Setup '-h' as an alias for the help flag.
+	// Clean up help.
+	kingpin.UsageTemplate(kingpin.CompactUsageTemplate)
+	kingpin.CommandLine.Help = "Fast, Docker Compose-based development for Mac OS X."
 	kingpin.CommandLine.HelpFlag.Short('h')
 
 	// Setup version printing.
