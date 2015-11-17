@@ -1,5 +1,5 @@
 # helm
-[![Build Status](https://travis-ci.org/Sitback/helm.svg?branch=master)](https://travis-ci.org/Sitback/docker-hat-v2)
+[![Build Status](https://travis-ci.org/Sitback/helm.svg?branch=master)](https://travis-ci.org/Sitback/helm)
 
 Version 2 of docker-hat.
 
