@@ -7,3 +7,6 @@ go:
 
 env:
 - GO15VENDOREXPERIMENT=1
+
+notifications:
+  slack: sitbackteam:tb1IP3OwCM1BmTPwyDDqpZIy
