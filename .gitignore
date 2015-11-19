@@ -25,3 +25,7 @@ _testmain.go
 
 # Built binaries.
 helm
+
+# Vendor files are handled by Glide.
+# https://github.com/Masterminds/glide
+vendor/

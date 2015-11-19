@@ -1,0 +1,13 @@
+package: main
+import:
+- package: github.com/docker/libcompose
+  version: 54adf4c9e924c263a27ce1f4d195829c1d17856d
+  subpackages:
+  - /project
+  - /docker
+- package: github.com/spf13/viper
+  version: e37b56e207dda4d79b9defe0548e960658ee8b6b
+- package: gopkg.in/alecthomas/kingpin.v2
+  version: 6e0b900c7f00daa54d47a64b5ff6a9c745c3ba06
+- package: github.com/Sirupsen/logrus
+  version: 6f383a9b2998dd6f401704269c3e6e192f6175ad
