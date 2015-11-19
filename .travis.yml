@@ -8,5 +8,10 @@ go:
 env:
 - GO15VENDOREXPERIMENT=1
 
+before_install:
+  - brew update
+  - brew install glide
+  - glide install
+
 notifications:
   slack: sitbackteam:tb1IP3OwCM1BmTPwyDDqpZIy
