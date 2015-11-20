@@ -17,6 +17,10 @@ $(BINARY): $(SOURCES)
 install:
 	go install ${LDFLAGS} ./...
 
+.PHONY: bootstrap
+bootstrap:
+	glide install
+
 .PHONY: clean
 clean:
 	if [ -f ${BINARY} ] ; then rm ${BINARY} ; fi

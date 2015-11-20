@@ -1,13 +1,50 @@
-package: main
+package: github.com/Sitback/helm
 import:
-- package: github.com/docker/libcompose
-  version: 54adf4c9e924c263a27ce1f4d195829c1d17856d
-  subpackages:
-  - /project
-  - /docker
+- package: github.com/cloudfoundry-incubator/candiedyaml
+  version: 55a459c2d9da2b078f0725e5fb324823b2c71702
+- package: golang.org/x/net
+  version: 2cba614e8ff920c60240d2677bc019af32ee04e5
 - package: github.com/spf13/viper
   version: e37b56e207dda4d79b9defe0548e960658ee8b6b
-- package: gopkg.in/alecthomas/kingpin.v2
-  version: 6e0b900c7f00daa54d47a64b5ff6a9c745c3ba06
+- package: github.com/alecthomas/units
+  version: 2efee857e7cfd4f3d0138cc3cbb1b4966962b93a
+- package: github.com/mitchellh/mapstructure
+  version: 482a9fd5fa83e8c4e7817413b80f3eb8feec03ef
+- package: github.com/spf13/pflag
+  version: 5644820622454e71517561946e3d94b9f9db6842
+- package: github.com/BurntSushi/toml
+  version: 056c9bc7be7190eaa7715723883caffa5f8fa3e4
+- package: github.com/alecthomas/template
+  version: b867cc6ab45cece8143cfcc6fc9c77cf3f2c23c0
+- package: gopkg.in/yaml.v2
+  version: bef53efd0c76e49e6de55ead051f886bea7e9420
+- package: github.com/spf13/cast
+  version: ee815aaf958c707ad07547cd62150d973710f747
+- package: github.com/fsouza/go-dockerclient
+  version: c3e8735e510cf8bc6d439300ff2fc247b1f2867c
+- package: github.com/docker/libcompose
+  version: 54adf4c9e924c263a27ce1f4d195829c1d17856d
 - package: github.com/Sirupsen/logrus
   version: 6f383a9b2998dd6f401704269c3e6e192f6175ad
+- package: github.com/magiconair/properties
+  version: 6ac0b95f449268951dd5c100682ea687a9866ea1
+- package: github.com/gorilla/mux
+  version: e444e69cbd2e2e3e0749a2f3c717cec491552bbf
+- package: github.com/docker/libtrust
+  version: fa567046d9b14f6aa788882a950d69651d230b21
+- package: github.com/docker/distribution
+  version: 0a3acb2625f553a71392ed9dc6ba1dde2cf3e3a8
+- package: gopkg.in/fsnotify.v1
+  version: 7be54206639f256967dd82fa767397ba5f8f48f5
+- package: github.com/gorilla/context
+  version: 14f550f51af52180c2eefed15e5fd18d63c0a64a
+- package: github.com/docker/docker
+  version: b63ec6e4b1f6f5c77a6a74a52fcea9564538c575
+- package: github.com/kr/text
+  version: bb797dc4fb8320488f47bf11de07a733d7233e1f
+- package: gopkg.in/alecthomas/kingpin.v2
+  version: 6e0b900c7f00daa54d47a64b5ff6a9c745c3ba06
+- package: github.com/spf13/jwalterweatherman
+  version: c2aa07df593850a04644d77bb757d002e517a296
+- package: github.com/kr/pretty
+  version: e6ac2fc51e89a3249e82157fa0bb7a18ef9dd5bb
