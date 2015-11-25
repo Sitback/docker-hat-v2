@@ -5,13 +5,14 @@ BINARY=helm
 
 VERSION=0.0.1
 BUILD=`git rev-parse --short HEAD`
+TARGET_OS=darwin
 
 LDFLAGS=-ldflags "-X main.Name=${BINARY} -X main.Version=${VERSION} -X main.Build=${BUILD}"
 
 .DEFAULT_GOAL: $(BINARY)
 
 $(BINARY): $(SOURCES)
-	go build ${LDFLAGS} -o ${BINARY}
+	gox -os="$TARGET_OS" ${LDFLAGS} -output="${BINARY}_{{.OS}}_{{.Arch}}"
 
 .PHONY: install
 install:

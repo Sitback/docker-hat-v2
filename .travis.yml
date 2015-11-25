@@ -1,4 +1,4 @@
-os: osx
+sudo: false
 
 language: go
 
@@ -9,8 +9,11 @@ env:
 - GO15VENDOREXPERIMENT=1
 
 before_install:
-  - brew update
-  - brew install glide
+  - wget "https://github.com/Masterminds/glide/releases/download/0.7.2/glide-0.7.2-linux-amd64.tar.gz" -O /tmp/glide.tar.gz
+  - mkdir -p /tmp/glide
+  - tar -xvzf /tmp/glide.tar.gz -C /tmp/glide/
+  - export PATH=$PATH:/tmp/glide/linux-amd64/
+  - go get github.com/mitchellh/gox
   - make bootstrap
 
 notifications:
