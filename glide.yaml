@@ -48,3 +48,7 @@ import:
   version: c2aa07df593850a04644d77bb757d002e517a296
 - package: github.com/kr/pretty
   version: e6ac2fc51e89a3249e82157fa0bb7a18ef9dd5bb
+- package: github.com/docker/machine
+  version: d65e23600e032e4e48acd5a916abe5962e6702c1
+  subpackages:
+  - /libmachine
