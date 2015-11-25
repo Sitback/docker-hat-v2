@@ -19,7 +19,10 @@ install:
 
 .PHONY: bootstrap
 bootstrap:
+	# Dependencies.
 	glide install
+	# Setup dockerversion for libcompose.
+	cd vendor/github.com/docker/libcompose; go generate
 
 .PHONY: clean
 clean:
