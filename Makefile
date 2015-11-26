@@ -12,7 +12,7 @@ LDFLAGS=-ldflags "-X main.Name=${BINARY} -X main.Version=${VERSION} -X main.Buil
 .DEFAULT_GOAL: $(BINARY)
 
 $(BINARY): $(SOURCES)
-	gox -os="$TARGET_OS" ${LDFLAGS} -output="${BINARY}_{{.OS}}_{{.Arch}}"
+	gox -os="${TARGET_OS}" ${LDFLAGS} -output="${BINARY}_{{.OS}}_{{.Arch}}"
 
 .PHONY: install
 install:
