@@ -24,7 +24,7 @@ _testmain.go
 *.prof
 
 # Built binaries.
-helm
+bin/
 
 # Vendor files are handled by Glide.
 # https://github.com/Masterminds/glide
